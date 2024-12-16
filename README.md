@@ -7,6 +7,15 @@ OBS & Streamer.bot End Stream Credits Overlay Video Guide:
 -----------------------------------------------------------
 Coming Soon!
 
+---------
+Features:
+---------
+1) Automatic Detects File Changes
+2) Automatic Reads Text Files
+3) Automatic Scrolling Up
+4) Each Category Is In Text Files
+5) Easy To Add new Categories
+
 ------------
 Requirements
 ------------
