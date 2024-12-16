@@ -42,11 +42,18 @@ Install:
 File Information:
 -----------------
 name: "New Followers" = file: "followers.txt"
+
 name: "New Twitch Cheers" = file: "cheers.txt"
+
 name: "New Subscribers" = file: "subscribers.txt"
+
 name: "New YouTube Memberships" = file: "memberships.txt"
+
 name: "New Raids" = file: "raids.txt"
+
 name: "New Gifted Subscriptions" = file: "gifted.txt"
+
 name: "New YouTube SuperChats & SuperStickers" = file: "superchat.txt"
+
 name: "New Lurks" = file: "lurks.txt"
 name: "New Viewers" = file: "chat.txt"
