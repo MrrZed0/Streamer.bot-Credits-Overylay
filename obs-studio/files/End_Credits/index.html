@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End Credits</title>
+    <style>
+        body {
+            margin: 0;
+            background: transparent;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        #credits {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            animation: scrollUp 30s linear infinite;
+        }
+
+        .category {
+            font-weight: bold;
+            font-size: 24px;
+            color: red;
+            text-shadow: 2px 2px 4px black;
+            margin-bottom: 10px;
+        }
+
+        .line {
+            color: orange;
+            text-shadow: 1px 1px 3px black;
+            margin: 10px 0;
+        }
+
+        /* Extra space added after each category */
+        .category-container {
+            margin-bottom: 30px; /* Extra space under each category's content */
+        }
+
+        @keyframes scrollUp {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="credits"></div>
+
+    <script>
+        const categories = [
+            { name: "New Followers", file: "followers.txt" },
+            { name: "New Twitch Cheers", file: "cheers.txt" },
+            { name: "New Subscribers", file: "subscribers.txt" },
+            { name: "New YouTube Memberships", file: "memberships.txt" },
+            { name: "New Raids", file: "raids.txt" },
+            { name: "New Gifted Subscriptions", file: "gifted.txt" },
+            { name: "New YouTube SuperChats & SuperStickers", file: "superchat.txt" },
+			{ name: "New Lurks", file: "lurks.txt" },
+            { name: "New Viewers", file: "chat.txt" }
+        ];
+
+        async function fetchCategoryData(category) {
+            try {
+                const response = await fetch(`${category.file}`);
+                if (response.ok) {
+                    const text = await response.text();
+                    if (text.trim() !== "") {
+                        return text.split('\n').map(line => `<div class="line">${line}</div>`).join('');
+                    }
+                }
+            } catch (error) {
+                console.error("Error fetching file:", error);
+            }
+            return '';
+        }
+
+        async function loadCredits() {
+            const creditsContainer = document.getElementById('credits');
+            creditsContainer.innerHTML = ''; // Clear previous content
+
+            for (const category of categories) {
+                const categoryData = await fetchCategoryData(category);
+                if (categoryData) {
+                    const categoryElement = document.createElement('div');
+                    categoryElement.classList.add('category-container'); // Add class for extra space
+                    categoryElement.innerHTML = `<div class="category">${category.name}</div>${categoryData}`;
+                    creditsContainer.appendChild(categoryElement);
+                }
+            }
+        }
+
+        function refreshCreditsWhenFinished() {
+            const creditsContainer = document.getElementById('credits');
+            creditsContainer.addEventListener('animationiteration', () => {
+                loadCredits();
+            });
+        }
+
+        loadCredits();
+        refreshCreditsWhenFinished();
+    </script>
+</body>
+</html>
