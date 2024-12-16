@@ -1,5 +1,7 @@
 OBS & Streamer.bot End Stream Credits Overlay
 
+![Test Image 1](https://github.com/MrrZed0/Streamer.bot-Credits-Overylay/blob/main/Credits_Preview.png)
+
 -----------------------------------------------------------
 OBS & Streamer.bot End Stream Credits Overlay Video Guide:
 -----------------------------------------------------------
@@ -54,6 +56,7 @@ name: "New YouTube Memberships" = file: "memberships.txt"
 name: "New Raids" = file: "raids.txt"
 
 name: "New Gifted Subscriptions" = file: "gifted.txt"
+
 
 name: "New YouTube SuperChats & SuperStickers" = file: "superchat.txt"
 
