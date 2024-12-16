@@ -36,6 +36,8 @@ Install:
 5) Under 'Text to write' enter %user%
 
 *I Also Included Streamer.bot Inport Code Just Copy The Group And Paste It To Your Alerts & Make Sure To Change The File Location In The C# Code*
+
+*Change Only The followers.txt file & The Argument Value 'Twitch: %targetUser%' - Make Sure At least Include %targetUser% To Grab Users Name - LEAVE THE REST ALONE THIS INCLUDES New_Twitch_Follower Argument*
 ![Test Image 1](https://github.com/MrrZed0/Streamer.bot-Credits-Overylay/blob/main/Untitled.png)
 
 -----------------
