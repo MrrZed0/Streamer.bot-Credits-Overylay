@@ -66,8 +66,22 @@ name: "New Raids" = file: "raids.txt"
 
 name: "New Gifted Subscriptions" = file: "gifted.txt"
 
-
 name: "New YouTube SuperChats & SuperStickers" = file: "superchat.txt"
 
 name: "New Lurks" = file: "lurks.txt"
+
 name: "New Viewers" = file: "chat.txt"
+
+--------------------------
+How To Add New Categories:
+--------------------------
+
+1) Open The index.html File In Notepad
+   
+2) Scroll To Where It Says The Following 'const categories = ['
+
+3) You Will See Lines Going { name: "New Followers", file: "followers.txt" }, and so on
+
+4) Copy One Of The Lines Of Code And Click On The End And Hit Enter Now Paste The Code
+
+5) Change TThe Name To Show In The Credits & File To A New Text File (Make Sure To Create The Text File Inside The End Credits Folder)
