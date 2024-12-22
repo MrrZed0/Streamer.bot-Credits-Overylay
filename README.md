@@ -7,7 +7,7 @@ OBS & Streamer.bot End Stream Credits Overlay Video Guide:
 -----------------------------------------------------------
 Coming Soon!
 
-** Works With Twitch, YouTube, Kick **
+** Works With Twitch, YouTube, Kick.com integration for Streamer.bot **
 
 ---------
 Features:
