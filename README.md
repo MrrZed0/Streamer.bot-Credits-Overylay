@@ -7,6 +7,8 @@ OBS & Streamer.bot End Stream Credits Overlay Video Guide:
 -----------------------------------------------------------
 Coming Soon!
 
+** Works With Twitch, YouTube, Kick **
+
 ---------
 Features:
 ---------
